@@ -28,32 +28,46 @@
 		<div class="jumbotron">
 			<div class="container">
 				<h1>Hello!</h1>
-				<p>Service workers are the new way of caching content for website. As the name itself suggests, it uses JavaScript workers API to cache content, control, feed offline app</p>
+				<p>Service Workers are the new way of caching content for website. As the name itself suggests, it uses Javascript Web Workers to cache content, control, feed offline app</p>
 				<p><a class="btn btn-primary btn-lg" href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" rel="noopener" target="_blank" role="button">Learn more »</a></p>
 			</div>
     	</div>
-    	<div class="container-fluid">
+    	<div class="container">
 			<div class="row">
 				<div class="col-md-3">
 				  <h2>Register Worker</h2>
 				  <img src="register.png" class="img-responsive" alt="Image">
-				  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+				  <p>Add this script in your html to register a service worker. Make sure you create a service worker file in your root directory since it has control only on the defined path and sub directories</p>
 				</div>
 				<div class="col-md-3">
 				  <h2>Install Worker</h2>
 				  <img src="install.png" class="img-responsive" alt="Image">
-				  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+				  <p>Once you register, add these lines in service worker file you created to install a worker which caches the necessary files provided with a cache name </p>
 				</div>
 				<div class="col-md-3">
 				  <h2>Return requests</h2>
 				  <img src="return.png" class="img-responsive" alt="Image">
-				  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+				  <p>After installation, create a method to return requests when user refreshes or navigates within the application</p>
 				</div>
 				<div class="col-md-3">
 				  <h2>Update worker</h2>
 				  <img src="update.png" class="img-responsive" alt="Image">
-				  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+				  <p>Automatically update service workers with this script when there is a change which deletes the old cache files</p>
 				</div>
+	      	</div>
+	      	<hr>
+	      	<div class="row">
+	      		<div class="col-lg-12">
+	      			<p>
+	      				Inorder to test this page offline, please open developer tools in chrome and navigate to application tab
+	      				<ul>
+	      					<li>Click the Service workers in left pane and look for sw.js with status active and running (Offline checkbox should be unchecked)</li>
+	      					<li>Check the Offline checkbox</li>
+	      					<li>Refresh the page and you will be still seeing the webpage!!</li>
+	      				</ul>
+	      			</p>
+	      			<p>Webpage is served from cache, checkout Cache storage tab in left pane to see the cache file</p>
+	      		</div>
 	      	</div>
 	      	<hr>
 	      	<footer>
@@ -64,7 +78,5 @@
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
- 		<script src="Hello World"></script>
 	</body>
 </html>
