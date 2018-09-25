@@ -7,8 +7,7 @@ self.addEventListener('install', function (event) {
        '/install.png',
        '/register.png',
        '/return.png',
-       '/update.png',
-       '/style.css'
+       '/update.png'
      ]);
    })
  );
