@@ -7,7 +7,8 @@ self.addEventListener('install', function (event) {
        '/install.png',
        '/register.png',
        '/return.png',
-       '/update.png'
+       '/update.png',
+       'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'
      ]);
    })
  );
